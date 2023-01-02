@@ -14,21 +14,11 @@ class Boost:
         self.super_properties = 'eyJvcyI6IldpbmRvd3MiLCJicm93c2VyIjoiQ2hyb21lIiwiZGV2aWNlIjoiIiwic3lzdGVtX2xvY2FsZSI6ImVuLVVTIiwiYnJvd3Nlcl91c2VyX2FnZW50IjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwOC4wLjAuMCBTYWZhcmkvNTM3LjM2IiwiYnJvd3Nlcl92ZXJzaW9uIjoiMTA4LjAuMC4wIiwib3NfdmVyc2lvbiI6IjEwIiwicmVmZXJyZXIiOiIiLCJyZWZlcnJpbmdfZG9tYWluIjoiIiwicmVmZXJyZXJfY3VycmVudCI6IiIsInJlZmVycmluZ19kb21haW5fY3VycmVudCI6IiIsInJlbGVhc2VfY2hhbm5lbCI6InN0YWJsZSIsImNsaWVudF9idWlsZF9udW1iZXIiOjE2NTQ4NSwiY2xpZW50X2V2ZW50X3NvdXJjZSI6bnVsbH0='
         self.fingerprint_url = 'https://discord.com/api/v9/experiments'
         self.register_url = 'https://discord.com/api/v9/auth/register'
-    @staticmethod
-    def parse_proxy(proxy: str):
-        username = proxy.split("//")[1].split(":")[0]
-        password = proxy.split("@")[0].split(":")[2]
-        proxy_host = proxy.split("@")[1].split(":")[0]
-        proxy_port = proxy.split("@")[1].split(":")[1]
-        return username, password, proxy_host, proxy_port
 
     def solve_captcha(self):
         try:
             print("[/]: Solving Captcha")
-       #     user, passw, host, port = Boost.parse_proxy(self.proxy)
             capmonster = HCaptchaTask(self.apikey)
-        #    capmonster.set_proxy('http', host, port, user, passw)
-       #     capmonster.set_user_agent(self.ua)
             task_id = capmonster.create_task("http://discord.com", "4c672d35-0701-42b2-88c3-78380b0db560")
             result = capmonster.join_task_result(task_id)
             key = result.get("gRecaptchaResponse")
