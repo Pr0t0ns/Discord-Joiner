@@ -51,7 +51,13 @@ class Boost:
         password = self.random_chars(random.randint(8, 10), extra="AfS!")
         email = self.random_chars(random.randint(6, 12), extra=random.choice(['@gmail.com', '@yahoo.com', '@outlook.com']))
         captchakey = self.solve_captcha()
-        payload = {"fingerprint": fingerprint,"email": email,"username": username,"password": password,"invite": self.serverinvite,"consent": True,"date_of_birth":"1991-04-03","gift_code_sku_id": None,"captcha_key": captchakey}
+        payload = {
+                   "fingerprint": fingerprint,
+                   "username": username,
+                   "invite": self.serverinvite,
+                   "consent": True,
+                   "captcha_key": captchakey
+         }
         headers = {
             "accept": "*/*",
             "accept-encoding": "gzip, deflate, br",
