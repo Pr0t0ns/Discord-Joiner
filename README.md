@@ -1,2 +1,11 @@
-# Discord-Joiner
-Discord Token Creator and Joiner made by Pr0t0n
+# Discord-Joiner (Working as of 1/28/2023)
+
+Discord Token Creator/Joiner developed by Pr0t0n
+
+
+*Features*
+
+* Fast Member Boosting (100-1000/min on high threading)
+* Capmonster Hcaptcha Support
+* HTTP(s) Proxy Support
+* Low Proxy Usage
