@@ -9,3 +9,5 @@ Discord Token Creator/Joiner developed by Pr0t0n
 * Capmonster Hcaptcha Support
 * HTTP(s) Proxy Support
 * Low Proxy Usage
+
+Thanks to Mouad-scriptz for Amazing PR that added a ton of new features
