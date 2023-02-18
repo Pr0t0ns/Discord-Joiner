@@ -1,0 +1,11 @@
+captcha:
+  solver-service: "anti-captcha.com" # Or capmonster.cloud
+  solver-key: ""
+
+settings:
+  invite_code: ""
+  threads: 5 
+  rotating_proxy: "" # Format is username:password@host:port or host:port
+
+token:
+  username: "" # Leave empty for random
